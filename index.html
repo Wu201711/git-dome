@@ -8,43 +8,57 @@
   <!--
   git的操作流程：
   1.）将index.html文件从工作区(也就是写代码的区域)提交到暂存区。
-  命令: git add index.html
+    命令: git add index.html
 
   2.)把index.html文件从暂存区推送到版本区(版本分支，这里默认是master)
-  命令：git commit -m '这是第二次提交,git的操作流程'
+    命令：git commit -m '这是第二次提交,git的操作流程'
 
   3.）将index.html文件从版本库推送到github(远程仓库里)
-  命令：git push master
+    命令：git push master
 
   git常用命令：
   1.）git log
-  查看git提交的日志
+    查看git提交的日志
 
   2.）git status
-  查看git状态(红色表示已经修改，还没做任何提交。绿色表示已经提交到暂存区)
+    查看git状态(红色表示已经修改，还没做任何提交。绿色表示已经提交到暂存区)
 
   3.）ls -al
-  可以查看到隐藏文件
+    可以查看到隐藏文件
 
   4.）cat 文件名
   可以看到文件内容
 
   git对比命令操作：
   1.）工作区对比暂存区
-  命令：git diff
+    命令：git diff
 
   2.）工作区对比版本区
-  命令：git diff master
+    命令：git diff master
 
   3.）暂存区对比版本区
-    git diff --cached
+   命令：git diff --cached
 
   git撤销操作
   1.）从暂存区撤销到操作区
-  git reset HEAD index.html
+    命令：git reset HEAD index.html
 
-  2.)撤销到版本库上一次的状态(也就是撤销还原到上一次提交到版本库时的内容)
-  命令：git checkout index.html
+  2.)让工作区撤销(返回)到版本库上一次的状态(也就是撤销还原到上一次提交到版本库时的内容(从上一次的版本恢复))
+    命令：git checkout index.html
+
+  3.）撤销上次提交的版本
+    (把上次提交的版本库的版本撤销到暂存区，再用当前需要提交的版本将撤销回来的覆盖掉并提交)
+    命令：git commit -m ''  --amend
+
+
+  git的删除操作：
+  1.）工作区随便删除
+
+  2.）从暂存区删除
+    命令：git rm --cached test.html
+
+  3.)同时删除工作区和暂存区
+    命令：git rm -f test.html
   -->
 </body>
 </html>
